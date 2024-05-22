@@ -1,0 +1,969 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+  height: 100vh;
+}
+.luckiest-guy-regular {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 200;
+  font-style: normal;
+}
+.contenedorGrid {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: repeat(3, auto); 
+}
+.elementoNavbarTop{
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+.elemento1{
+    grid-row: 2/4;
+    grid-column: 1/2;
+}
+.elemento3{
+    grid-row: 2/4;
+    grid-column: 3/3; 
+}
+.elemento4{
+    grid-column: 2/3; 
+}
+.imgIzquierda, .imgDerecha {
+    background-size: 100% 100%; 
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+.imgIzquierda {
+    background-image: url('/img/fondo izquierdo.jpeg');
+    z-index: 0;
+}
+.imgDerecha {
+    background-image: url('/img/fondo derecho.jpeg'); 
+}
+.contenedor-principal{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #0c0c0c;
+}
+.contenedor{
+  width: 20%;
+  overflow: hidden;
+}
+.riel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.riel img {
+    width: 92%;
+}
+
+/* -/-/-/-/-/-/-/-/-/ INICIO DEL NAVBAR TOP -/-/-/-/-/-/-/-/-/-/- */
+.navbarTop {
+    width: 100%;
+    height: 50px; 
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, rgba(41, 7, 51, 0.973), rgba(143, 79, 168, 0.966), rgba(60, 10, 65, 0.5)); /* Degradado de aqua transparente */
+    align-items: center; 
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/* ******** INICIO de Boton Lobby ********** */
+.botonLobby {
+    background: linear-gradient(to bottom, #e9d043, #dabb0d, #f0ed64); 
+    position: relative; 
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    color: #635925; 
+    font-size: 25px;
+    right: -25px;
+    border: none; 
+}
+/* ******** Fin de Boton Lobby ********** */
+/* ******** Inicio de Boton Monedas ********** */
+.botonMonedas {
+  position: relative;
+  width: 200px; 
+  height: 40px;
+  background-image: linear-gradient(to bottom, #da6965, #e75d53, #f10707);
+  text-align: left;
+  font-size: 2vw;
+  border-radius: 25px; 
+  padding-left: 5%; 
+  box-shadow: 0 0 0 3px #ee9725, 0 0 0 6px #f3b93d;
+  border: none; 
+}
+.imagen-icono-monedas {
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background-image: url("/img/moneda.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0; 
+}
+.textoEncimaImagen {
+    position: absolute;
+    top: 50%; 
+    left: 40%; 
+    transform: translate(-50%, -50%); 
+    font-size: 25px; 
+    color: #860f0f; 
+    font-family: 'Luckiest Guy', cursive; 
+}
+/* ******** Fin de Boton Monedas ********** */
+/* ******** INICIO DE BOTON DE COMPRA ********** */
+.botonCompra {
+    color: #fff;
+    width: 300px;
+    height: 70px;
+    font-size: 30px;
+}
+.imagenLobby {
+    width: 120%;
+    height: 60px;
+    margin: 0 auto; 
+    position: relative; 
+    left: -15%; 
+    top:5px;
+}
+.textoEncimaImagen {
+  position: absolute;
+  top: 50%; 
+  left: 40%; 
+  transform: translate(-50%, -50%); 
+  font-size: 25px; 
+  color: #860f0f; 
+  font-family: 'Luckiest Guy', cursive; 
+}
+/* ******** FIN DEL BOTON DE COMPRA ********** */
+/* ******** INICIO DEL BOTON DE EXPERIECIA ********** */
+.contenedor-nivel {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 230px;
+    height: 40px;
+     box-shadow: 
+      0 0 0 3px #ee9725, 
+      0 0 0 6px #f3b93d; 
+}
+.imagen-icono-experiencia {
+    position: absolute;
+    left: -40px;
+    top: 43%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background-image: url("/img/experiencia.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 9999; 
+}
+.nivel-texto {
+  flex: 2;
+  padding-right: 50px;
+  padding-left: 50px;
+  background-color: #85279c;
+  height: 40px;
+  text-align: center;
+  display: flex; 
+  align-items: center; 
+  font-size: 25px;
+  color: #fff; 
+  z-index: 2; 
+}
+.barra-progreso {
+  width: 190px;
+  height: 40px;
+  background-color: #c79be4; 
+  overflow: hidden;
+  top: 60px;  
+}
+/* ******** FIN DEL BOTON DE EXPERIENCIA  ********** */
+/* ******** INICIO DEL BOTON DE MENU  ********** */
+.botonMenu {
+    position: relative;
+    height: 55px;
+    width: 60px;
+    background-image: url('/img/menu.png');
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 90px;
+    left: -50px;
+}
+.botonMenu:hover {
+    transform: translateY(2px); 
+}
+.botonMenu:active {
+    transform: translateY(4px); 
+}
+.botonMenu:hover::after {
+    opacity: 1; 
+}
+.botonMenu:active {
+    transform: translateY(2px); 
+}
+.menuOpciones {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center; 
+}
+.menuOpciones img {
+    max-width: 100%;
+    height: auto;
+}
+.textoSobreImagen {
+    position: absolute;
+    top: 10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    color: white; 
+    font-size: 18px;
+}
+.menuOpciones img {
+    max-width: 100%; 
+    height: auto; 
+}
+/* ******** FIN DEL BOTON DE MENU  ********** */
+
+
+/* ******** INICIO DE BOTONES abajo  ********** */
+.navbarBottom {
+  background: linear-gradient(to bottom, #1b1a7c, #090531, #1b1a7c); 
+  width: 115%;
+  clip-path: polygon(6% 0, 93% 0, 100% 100%, 0% 100%);
+  position: relative; 
+  z-index: 1; 
+  left: -70px;
+
+}
+
+
+.button {
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.2);
+  text-shadow: 0 1px 0 hsla(0, 0%, 0%, 0.2);
+  text-decoration: none !important;
+  text-transform: uppercase;
+  
+  font-weight: bold;
+  display: inline-block;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s; 
+}
+.button:active {
+  -webkit-transform: translateY(7px);
+  -moz-transform: translateY(7px);
+  -o-transform: translateY(7px);
+  transform: translateY(7px);
+}
+/* ******** FIN DEL BOTONES  ********** */
+
+/* ******** INICIO DE BOTON EXCLAMACION  ********** */
+.botonExclamacion {
+  background: linear-gradient(to bottom, #eb4040ea, #e00a0a, #ff0707); 
+  box-shadow: 0 10px 0 #8a0606,
+              0 11px 5px hsla(0, 0%, 0%, 0.5);
+  padding: 20px 27px;
+  border-radius: 100px;
+  margin-right: -60px; 
+  margin-left: 70px;
+  position: relative; 
+  z-index: 1; 
+  top: -33px;
+  color:#0c0c0c;
+}
+.botonExclamacion:active {
+  box-shadow: 0 3px 0 #0b57ad,
+              0 4px 6px hsla(0, 0%, 0%, 0.7);
+}
+.botonExclamacion::before {
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/signo.png");
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat; 
+  border-radius: inherit;
+  z-index: -1;
+}
+/* ******** FIN DE BOTON EXCLAMACION  ********** */
+/* ******** INICIO DE BOTON MENOS  ********** */
+.botonMenos {
+  background: linear-gradient(to bottom, #083486, #1a46c0, #1E90FF); 
+  box-shadow: 0 10px 0 #0b57ad,
+              0 11px 5px hsla(0, 0%, 0%, 0.5);
+  padding: 20px 27px;
+  border-radius: 100px;
+  margin-right: -50px; 
+  margin-left: 70px;
+  position: relative; 
+  z-index: 1; 
+  top: -33px;
+  color:#0c0c0c; 
+}
+.botonMenos:active {
+  box-shadow: 0 3px 0 #0b57ad,
+              0 4px 6px hsla(0, 0%, 0%, 0.7);
+}
+.botonMenos::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/menos.png");
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat; 
+  border-radius: inherit;
+  z-index: -1;
+}
+/* ******** FIN DEL BOTONES MENOS  ********** */
+/* ******** INICIO DE PANEL APUESTA  ********** */
+.panelApuesta {
+  font-family: 'Lobster', cursive; 
+  display: inline-block;
+  text-align: center; 
+  background-color: #1246ee54;
+  color: #f1eef8; 
+  border-radius: 6px; 
+  width: 220px; 
+  height: 47px;
+  padding: 10px 0;
+  clip-path: polygon(7% 16%, 93% 17%, 100% 100%, 0% 100%);
+  margin-left: 10px;
+  margin-right: 20px;  
+  position: relative;
+  top:-15px;
+}
+
+.apuesta {
+  font-family: 'Lobster', cursive; 
+  display: block;
+  margin-top: 2px;
+}
+/* ******** FIN DEL PANEL APUESTA    ********** */
+/* ******** INICIO DE BOTON MAS  ********** */
+.botonMas {
+  background: linear-gradient(to bottom, #083486, #1a46c0, #1E90FF); 
+  box-shadow: 0 10px 0 #0b57ad,
+              0 11px 5px hsla(0, 0%, 0%, 0.5);
+  padding: 20px 27px;
+  border-radius: 100px;     
+  margin-right: 10px; 
+  margin-left: -50px;   
+  position: relative; 
+  z-index: 1; 
+  top: -33px;
+  color: black; 
+}
+.botonMas::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/img/mas.png");
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat; 
+  border-radius: inherit;
+  z-index: -1;
+}
+.botonMas:active {
+  box-shadow: 0 3px 0 #0b57ad,
+              0 4px 6px hsla(0, 0%, 0%, 0.7);
+}
+/* ******** FIN DEL BOTONES MAS  ********** */
+/* ******** INICIO DEL PANEL DE WIN  ********** */
+.panelWins {
+  text-align: center;
+  position: relative;
+  background: linear-gradient(to bottom, #131312, #161616c9, #0c0c0b);
+  padding: 5px 110px;
+  margin-top: 6px;
+  font-size: 15px;
+  margin-left: 10px;
+  box-sizing: border-box;
+  transform: rotateX(30deg);
+  color: gold;
+  border: 3px solid transparent; 
+  border-radius: 20px; 
+  box-shadow: 
+    0 0 0 3px #f89007, 
+    0 0 0 6px #f3b93d; 
+  font-size: 25px;
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 150;
+  overflow: hidden;
+}
+.panelWins::before,
+.panelWins::after {
+  content: '';
+  position: absolute;
+  background: linear-gradient(to right, transparent, #f3b93d, transparent);
+}
+.panelWins::before,
+.panelWins::after {
+  width: 100%;
+  height: 3px;
+}
+.panelWins::before {
+  top: 0;
+  left: -100%;
+  animation: animateLineLeft 2s linear infinite;
+}
+.panelWins::after {
+  bottom: 0;
+  right: -100%;
+  animation: animateLineRight 2s linear infinite;
+}
+.panelWins::before-vertical,
+.panelWins::after-vertical {
+  content: '';
+  position: absolute;
+  background: linear-gradient(to bottom, transparent, #f3b93d, transparent);
+}
+.panelWins::before-vertical,
+.panelWins::after-vertical {
+  width: 3px;
+  height: 100%;
+}
+.panelWins::before-vertical {
+  top: 0;
+  left: 0; 
+  animation: animateLineTop 2s linear infinite;
+}
+.panelWins::after-vertical {
+  top: 0;
+  right: 0; 
+  animation: animateLineBottom 2s linear infinite;
+}
+@keyframes animateLineTop {
+  0% { top: -100%; }
+  100% { top: 100%; }
+}
+@keyframes animateLineBottom {
+  0% { top: 100%; }
+  100% { top: -100%; }
+}
+@keyframes animateLineLeft {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+@keyframes animateLineRight {
+  0% { right: -100%; }
+  100% { right: 100%; }
+}
+/* ******** FIN DEL PANEL DE WINS ********** */
+/* ******** INCIO DEL BOTON MAYOR APUESTA ********** */
+.botonMayorApuesta {
+  background: linear-gradient(to bottom, #9225c5, #9225c5, #c08ddd); 
+  box-shadow: 0 10px 0 #862caa,
+              0 11px 5px hsla(0, 0%, 0%, 0.5);
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-top: 6px;
+  font-size: 17px;
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 200;
+  font-style: normal;
+  margin-left: 25px;     
+  margin-right: 10px;     
+  text-align: center; 
+  color:#2b1947;
+  top: -23px;
+  position: relative;
+}
+.botonMayorApuesta:active {
+  box-shadow: 0 3px 0 #3a6600,
+              0 4px 6px hsla(0, 0%, 0%, 0.7);
+}
+/* ******** FIN  DEL BOTON MAYOR APUESTA ********** */
+/* ******** INICIO DEL BOTON JUGAR  ********** */
+.botonJugar {
+  background: linear-gradient(to bottom, #13990e, #31bb0f, #f0ed64); 
+  box-shadow: 0 10px 0 #3a6600,
+              0 11px 5px hsla(0, 0%, 0%, 0.5);
+  padding: 8px 20px; 
+  margin-top: 6px;
+  font-size: 35px;
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 200;
+  font-style: normal;
+  margin-left: 10px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  position: relative;
+  top: -27px;
+  color:rgb(10, 51, 14);
+}
+/* ******** FIN DEL BOTON JUGAR  ********** */
+
+
+/* Media query para pantallas entre 340px y 640px en orientación landscape */
+@media only screen and (min-width: 320px) and (max-width: 640px) and (orientation: landscape) {
+  .navbarTop {
+    width: 100%;
+    height: 35px; 
+ 
+}
+.navbarBottom {
+  background: linear-gradient(to bottom, #1b1a7c, #090531, #1b1a7c); 
+  width: 115%;
+  clip-path: polygon(6% 0, 93% 0, 100% 100%, 0% 100%);
+  position: relative; /* Para permitir el uso de z-index */
+  z-index: 1; /* Colocar encima de las imágenes */
+  left: -30px;
+  height: 65px;
+}
+.riel img {
+  width: 95%;
+}
+  /* Estilos para el botón Lobby */
+  .botonLobby {
+    width: 70px;
+    height: 40px;
+    font-size: 20px;
+    right: 10px;
+  }
+  /* Estilos para el botón Monedas */
+  .botonMonedas {
+    width: 110px;
+    height: 30px; 
+    left: -20px;
+  }
+  /* Estilos para la imagen de icono de monedas */
+  .imagen-icono-monedas {
+    width: 45px;
+    height: 50px;
+    left: -30px;
+  }
+  /* Estilos para el texto encima de la imagen */
+  .textoEncimaImagen {
+    left: 55px;
+    font-size: 20px;
+  }
+  /* Estilos para el botón de compra */
+  .botonCompra {
+    width: 70px;
+    height: 60px;
+  }
+  /* Estilos para la imagen del Lobby */
+  .imagenLobby {
+    width: 160px;
+    height: 40px;
+    left: -50px;
+    top: 10px;
+  }
+  /* Estilos para el contenedor del nivel */
+  .contenedor-nivel {
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    width: 110px;
+    height: 30px;
+    right: -30px;
+  }
+  /* Estilos para la imagen del icono de experiencia */
+  .imagen-icono-experiencia {
+    left: -30px;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+  }
+  /* Estilos para el texto del nivel */
+  .nivel-texto {
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 30px;
+    font-size: 15px;
+  }
+  /* Estilos para la barra de progreso */
+  .barra-progreso {
+    width: 120px;
+    height: 30px;
+    top: 50px;
+  }
+  /* Estilos para el botón de menú */
+  .botonMenu {
+    height: 40px;
+    width: 40px;
+    left: 10px;
+  }
+  .botonExclamacion {
+    padding: 6px 12px;
+    top: -17px;
+    margin-right: -10px; 
+    margin-left: 25px;
+  }
+  .botonMenos {
+    padding: 6px 12px;
+    top: -17px;
+    margin-right: -10px; 
+    margin-left: 15px;
+  }
+  .panelApuesta {
+    width: 90px; 
+    height: 25px;
+    margin-left:-5px;
+    margin-right: 10px;  
+    top:-3px;
+    font-size: 15px;
+  }
+  .apuesta {
+    font-size: 10px;
+    margin-top: 2px;
+  }
+  .botonMas {
+    padding: 6px 12px;
+    top: -17px;
+    margin-right: -10px; 
+    margin-left: -25px;
+  }
+  .panelWins {
+    padding: 0px 25px;
+    margin-top: 8px;
+    font-size: 8px;
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: 0;
+  
+  }
+  .botonMayorApuesta {
+    padding: 5px 12px;
+    margin-top: 6px;
+    font-size: 8px;
+    margin-left: 15px;     
+    margin-right: 10px;     
+    top: -17px;
+    margin-left: 10px;     
+    margin-right: 0px; 
+  }
+  .botonJugar {
+    padding: 6px 12px; 
+    margin-top: 6px;
+    font-size: 15px;
+    margin-left: 5px;
+    top: -20px;
+    
+  }
+
+}
+
+/* Media query para pantallas entre 641px y 800px en orientación landscape */
+@media only screen and (min-width: 641px) and (max-width: 800px) and (orientation: landscape) {
+  .navbarTop {
+    width: 100%;
+    height: 10vh; 
+  }
+  .navbarBottom {
+    background: linear-gradient(to bottom, #1b1a7c, #090531, #1b1a7c); 
+    width: 115%;
+    clip-path: polygon(6% 0, 93% 0, 100% 100%, 0% 100%);
+    position: relative; 
+    z-index: 1; 
+    left: -35px;
+  }
+  .riel img {
+    width: 100%;
+  }
+  /* Estilos para el botón Lobby */
+  .botonLobby {
+    width: 10%; 
+    height: 40px;
+    font-size: 2vw; 
+    right: 1vw; 
+  }
+  /* Estilos para el botón Monedas */
+  .botonMonedas {
+    width: 110px; 
+    height: 30px; 
+    left: -20px;
+  }
+  /* Estilos para la imagen de icono de monedas */
+  .imagen-icono-monedas {
+    width: 45px;
+    height: 50px;
+    left: -30px;
+  }
+  /* Estilos para el texto encima de la imagen */
+  .textoEncimaImagen {
+    left: 55px;
+    font-size: 20px;
+  }
+  /* Estilos para el botón de compra */
+  .botonCompra {
+    width: 70px;
+    height: 60px;
+  }
+  /* Estilos para la imagen del Lobby */
+  .imagenLobby {
+    width: 160px;
+    height: 40px;
+    left: -50px;
+    top: 10px;
+  }
+  /* Estilos para el contenedor del nivel */
+  .contenedor-nivel {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    width: 110px;
+    height: 30px;
+    right: -30px;
+  }
+  /* Estilos para la imagen del icono de experiencia */
+  .imagen-icono-experiencia {
+    left: -30px;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+  }
+  /* Estilos para el texto del nivel */
+  .nivel-texto {
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 30px;
+    font-size: 15px;
+  }
+  /* Estilos para la barra de progreso */
+  .barra-progreso {
+    width: 120px;
+    height: 30px;
+    top: 50px;
+  }
+  /* Estilos para el botón de menú */
+  .botonMenu {
+    height: 40px;
+    width: 40px;
+    left: 10px;
+  }
+  .botonExclamacion {
+    padding: 6px 12px;
+    top: -19px;
+    margin-right: -10px; 
+    margin-left: 40px;
+  }
+  .botonMenos {
+    padding: 6px 12px;
+    top: -19px;
+    margin-right: -10px; 
+    margin-left: 15px;
+  }
+  .panelApuesta {
+    width: 100px; 
+    height: 25px;
+    margin-left: -5px;
+    margin-right: 10px;  
+    top: -5px;
+    font-size: 15px;
+  }
+  .apuesta {
+    font-size: 10px;
+    margin-top: 2px;
+  }
+  .botonMas {
+    padding: 6px 12px;
+    top: -19px;
+    margin-right: -10px; 
+    margin-left: -25px;
+  }
+  .panelWins {
+    padding: 0px 35px;
+    margin-top: 8px;
+    font-size: 8px;
+    margin-left: 25px;
+    font-size: 15px;
+    font-weight: 0;
+  
+  }
+  .botonMayorApuesta {
+    padding: 5px 12px;
+    margin-top: 6px;
+    font-size: 8px;
+    margin-left: 20px;     
+    margin-right: 15px;     
+    top: -17px;
+    margin-left: 10px;     
+    margin-right: 0px; 
+  }
+  .botonJugar {
+    padding: 6px 15px; 
+    margin-top: 6px;
+    font-size: 15px;
+    margin-left: 15px;
+    top: -20px;
+    margin-left: 5px;
+  }
+
+}
+/* Media query para pantallas entre 801px y 1024px en orientación landscape */
+@media only screen and (min-width: 801px) and (max-width: 1024px) and (orientation: landscape) {
+  .navbarTop {
+    width: 100%;
+    height: 35px; 
+  }
+  .navbarBottom {
+    background: linear-gradient(to bottom, #1b1a7c, #090531, #1b1a7c); 
+    width: 115%;
+    clip-path: polygon(6% 0, 93% 0, 100% 100%, 0% 100%);
+    position: relative; 
+    z-index: 1; 
+    left: -40px;
+  }
+  .riel img {
+    width: 80%;
+  }
+  /* Estilos para el botón Lobby */
+  .botonLobby {
+    width: 10%; 
+    height: 40px;
+    font-size: 20px;
+    right: 10px;
+  }
+  /* Estilos para el botón Monedas */
+  .botonMonedas {
+    width: 110px; 
+    height: 30px; 
+    left: -20px;
+  }
+  /* Estilos para la imagen de icono de monedas */
+  .imagen-icono-monedas {
+    width: 45px;
+    height: 50px;
+    left: -30px;
+  }
+  /* Estilos para el texto encima de la imagen */
+  .textoEncimaImagen {
+    left: 55px;
+    font-size: 20px;
+  }
+  /* Estilos para el botón de compra */
+  .botonCompra {
+    width: 70px;
+    height: 60px;
+  }
+  /* Estilos para la imagen del Lobby */
+  .imagenLobby {
+    width: 160px;
+    height: 40px;
+    left: -50px;
+    top: 10px;
+  }
+  /* Estilos para el contenedor del nivel */
+  .contenedor-nivel {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    width: 110px;
+    height: 30px;
+    right: -30px;
+  }
+  /* Estilos para la imagen del icono de experiencia */
+  .imagen-icono-experiencia {
+    left: -30px;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+  }
+  /* Estilos para el texto del nivel */
+  .nivel-texto {
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 30px;
+    font-size: 15px;
+  }
+  /* Estilos para la barra de progreso */
+  .barra-progreso {
+    width: 120px;
+    height: 30px;
+    top: 50px;
+  }
+  /* Estilos para el botón de menú */
+  .botonMenu {
+    height: 40px;
+    width: 40px;
+    left: 10px;
+  }
+  .botonExclamacion {
+    padding: 6px 15px;
+    top: -17px;
+    margin-right: -10px; 
+    margin-left: 45px;
+  }
+  .botonMenos {
+    padding: 6px 15px;
+    top: -17px;
+    margin-right: -15px; 
+    margin-left: 15px;
+  }
+  .panelApuesta {
+    width: 130px; 
+    height: 25px;
+    margin-left: -5px;
+    margin-right: 10px;  
+    top: -3px;
+    font-size: 15px;
+  }
+  .apuesta {
+    font-size: 10px;
+    margin-top: 2px;
+  }
+  .botonMas {
+    padding: 6px 15px;
+    top: -17px;
+    margin-right: -9px; 
+    margin-left: -30px;
+  }
+  .panelWins {
+    padding: 0px 50px;
+    margin-top: 8px;
+    font-size: 8px;
+    margin-left: 25px;
+    font-size: 15px;
+    font-weight: 0;
+  
+  }
+  .botonMayorApuesta {
+    padding: 5px 12px;
+    margin-top: 6px;
+    font-size: 8px;
+    margin-left: 20px;     
+    margin-right: 15px;     
+    top: -17px;
+    margin-left: 15px;     
+    margin-right: 0px; 
+  }
+  .botonJugar {
+    padding: 6px 15px; 
+    margin-top: 6px;
+    font-size: 15px;
+    margin-left: 15px;
+    top: -20px;
+    margin-right: 5px;
+  }
+}
